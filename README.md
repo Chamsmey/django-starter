@@ -32,3 +32,28 @@
 - import your view here `urls.py`
 - `urlpatterns  = [ path(' ' ,views.home), ... any route here]` in **app directory**
 - `urlpatterns  = [ path(' ' ,include( 'app-name.urls')` **main** **directory**
+## Create template
+
+To create template you need to create a folder **template** inside your app directory `accounts/templates/accounts`
+**Noted** :  *inside templates directory should be name same your app directory name*
+Don't forget to register your app in *settings.py* 
+`INSTALLED_APPS = [..., 'account']`
+
+
+# inheritance template 
+
+That mean we can use template in everywhere you want.
+**Parent template** ` {% block your_block_name %} // open tag`
+*NOte* : 
+
+/// you can pass child template here 
+
+`{% endblock } // end your_block_name`
+
+**Child template** `{% extends 'parent_directory'%}`
+or you  use include to pass something inside your template 
+`{% include 'your_template_here' %} ` 
+## Render temlplate 
+
+`def home(request) : 
+	return render(request, 'your_temlplate_here') `
