@@ -18,7 +18,7 @@
 -  `python manage.py runserver 8080` with specific port
 
 ## Create app in Django project 
-- `python startapp app_name`
+- `python maange.py startapp app_name`
 ### Registeration Routers
 - create file `views.py` 
 		`from django.shortcuts import render` 
